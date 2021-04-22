@@ -1,0 +1,124 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+class basics {
+public : 
+	double x, y;
+	basics() {
+		cout << "Enter the First Number : " << "\n";
+		cin >> x;
+		cout << "Enter the Second Number : " << "\n";
+		cin >> y;
+	}
+};
+class basics2 {
+public :
+	double x;
+	basics2() {
+		cout << "Enter the Degree : " << "\n";
+		cin >> x;
+	}
+};
+class basics3 {
+public :
+	double x;
+	basics3() {
+		cout << "Enter a Number : " << "\n";
+		cin >> x;
+	}
+};
+class pluss : public basics {
+public : 
+	pluss() {
+		double sum;
+		sum = x + y;
+		cout << sum << "\n";
+	}
+};
+class mines : public basics {
+public :
+	mines() {
+		double sum;
+		sum = x - y;
+		cout << sum << "\n";
+	}
+};
+class muliple : public basics {
+public:
+	muliple() {
+		double sum;
+		sum = x * y;
+		cout << sum << "\n";
+	}
+};
+class deviding : public basics {
+public:
+	deviding() {
+		double sum;
+		sum = x / y;
+		cout << sum << "\n";
+	}
+};
+class power : public basics {
+public:
+	power() {
+		double sum;
+		sum = pow(x, y);
+		cout << sum << "\n";
+	}
+};
+class squre_root : public basics3 {
+public:
+	squre_root() {
+		double sum;
+		sum = sqrt(x);
+		cout << sum << "\n";
+	}
+};
+class sine : public basics2 {
+public:
+	sine() {
+		double sum;
+		sum = (x * 3.14) / 180;
+		cout << sin(sum) << "\n";
+	}
+};
+class cosine : public basics2 {
+public:
+	cosine() {
+		double sum;
+		sum = (x * 3.14) / 180;
+		cout << cos(sum) << "\n";
+	}
+};
+class tangent : public basics2 {
+public:
+	tangent() {
+		double sum;
+		sum = (x * 3.14) / 180;
+		cout << tan(sum) << "\n";
+	}
+};
+int main() 
+{
+	string op;
+	cout << "Enter an Opreation : " << "\n";
+	cin >> op;
+	if (op == "+")
+		pluss p;
+	else if (op == "-")
+		mines m;
+	else if (op == "*")
+		muliple ml;
+	else if (op == "d")
+		deviding d;
+	else if (op == "p")
+		power pw;
+	else if (op == "sin")
+		sine s;
+	else if (op == "cos")
+		cosine c;
+	else if (op == "tan")
+		tangent t;
+	return 0;
+}
